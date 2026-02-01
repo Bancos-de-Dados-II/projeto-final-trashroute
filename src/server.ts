@@ -1,6 +1,7 @@
 import dotenv from 'dotenv'
 import app from './app'
 import { connectMongo } from './config/mongo'
+import pevRoutes from './routes/pev.routes'
 
 dotenv.config()
 connectMongo().then(() => {
@@ -8,6 +9,7 @@ connectMongo().then(() => {
 })
 
 const PORT = process.env.PORT || 3333
+app.use(pevRoutes)
 
 app.listen(PORT, () => {
   console.log(`Trash Route API rodando na porta ${PORT}`)

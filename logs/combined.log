@@ -1,0 +1,20 @@
+{"ip":"::1","level":"info","message":"GET /","timestamp":"2026-02-03T21:55:25.633Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"GET /index.html","timestamp":"2026-02-03T21:55:29.941Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"POST /auth/login","timestamp":"2026-02-03T21:55:49.183Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"email":"cesar@c","level":"warn","message":"Tentativa de login com email não cadastrado","timestamp":"2026-02-03T21:55:49.246Z"}
+{"ip":"::1","level":"info","message":"POST /auth/register","timestamp":"2026-02-03T21:56:11.321Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"level":"info","message":"Usuário registrado: cesar@gmail","timestamp":"2026-02-03T21:56:11.464Z","userId":"69826efb13a11d459278583a"}
+{"ip":"::1","level":"info","message":"POST /auth/login","timestamp":"2026-02-03T21:56:18.808Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"email":"cesar@gmail","level":"info","message":"Login realizado com sucesso","role":"CIDADAO","timestamp":"2026-02-03T21:56:18.936Z"}
+{"ip":"::1","level":"info","message":"GET /pevs","timestamp":"2026-02-03T21:56:39.986Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"error":"jwt malformed","level":"error","message":"Token inválido","timestamp":"2026-02-03T21:56:39.987Z"}
+{"ip":"::1","level":"info","message":"GET /pevs","timestamp":"2026-02-03T21:56:40.999Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"error":"jwt malformed","level":"error","message":"Token inválido","timestamp":"2026-02-03T21:56:41.000Z"}
+{"ip":"::1","level":"info","message":"POST /auth/login","timestamp":"2026-02-03T21:57:08.655Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"email":"cesar@gmail.com","level":"warn","message":"Tentativa de login com email não cadastrado","timestamp":"2026-02-03T21:57:08.711Z"}
+{"ip":"::1","level":"info","message":"POST /auth/login","timestamp":"2026-02-03T21:57:13.765Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"email":"cesar@gmail","level":"info","message":"Login realizado com sucesso","role":"CIDADAO","timestamp":"2026-02-03T21:57:13.890Z"}
+{"ip":"::1","level":"info","message":"POST /auth/login","timestamp":"2026-02-03T21:57:24.086Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"email":"cesar@gmail","level":"info","message":"Login realizado com sucesso","role":"CIDADAO","timestamp":"2026-02-03T21:57:24.210Z"}
+{"ip":"::1","level":"info","message":"POST /auth/login","timestamp":"2026-02-03T21:57:39.235Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"email":"cesar@gmail","level":"info","message":"Login realizado com sucesso","role":"CIDADAO","timestamp":"2026-02-03T21:57:39.370Z"}

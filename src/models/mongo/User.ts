@@ -4,13 +4,27 @@ const UserSchema = new Schema({
   nome: String,
   email: {
     type: String,
-    unique: true
+    unique: true,
+    required: true
   },
-  senha: String,
+  senha: {
+    type: String,
+    required: true
+  },
   role: {
     type: String,
     enum: ['CIDADAO', 'EMPRESA', 'ONG', 'ADMIN'],
     default: 'CIDADAO'
+  },
+  isAdmin: {
+    type: String,
+    enum: ['s', 'n'],
+    default: 'n',
+    required: true
+  },
+  createdAt: {
+    type: Date,
+    default: Date.now
   }
 })
 

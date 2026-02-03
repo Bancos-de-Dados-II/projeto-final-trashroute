@@ -1,4 +1,4 @@
-import { Schema, model } from 'mongoose'
+import { Schema, model, models } from 'mongoose'
 
 const PevSchema = new Schema({
   nome: String,
@@ -18,4 +18,4 @@ const PevSchema = new Schema({
 
 PevSchema.index({ localizacao: '2dsphere' })
 
-export const Pev = model('Pev', PevSchema)
+export const Pev = models.Pev || model('Pev', PevSchema)

@@ -17,3 +17,15 @@ export async function criarPev(data: CreatePevInput) {
     }
   })
 }
+
+export async function atualizarPev(id: string, data: any) {
+  return Pev.findByIdAndUpdate(id, data, { new: true })
+}
+
+export async function deletarPev(id: string) {
+  return Pev.findByIdAndDelete(id)
+}
+
+export async function buscarPevPorId(id: string) {
+  return Pev.findById(id)
+}

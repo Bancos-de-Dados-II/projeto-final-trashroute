@@ -1,2 +1,17 @@
 {"error":"jwt malformed","level":"error","message":"Token inválido","timestamp":"2026-02-03T21:56:39.987Z"}
 {"error":"jwt malformed","level":"error","message":"Token inválido","timestamp":"2026-02-03T21:56:41.000Z"}
+{"error":"(0 , pevService_1.listarPevs) is not a function","level":"error","message":"Erro ao listar PEVs","timestamp":"2026-02-03T22:08:27.492Z"}
+{"error":"(0 , pevService_1.listarPevs) is not a function","level":"error","message":"Erro ao listar PEVs","timestamp":"2026-02-03T22:08:29.533Z"}
+{"error":"(0 , pevService_1.listarPevs) is not a function","level":"error","message":"Erro ao listar PEVs","timestamp":"2026-02-03T22:08:45.837Z"}
+{"error":"jwt malformed","level":"error","message":"Token inválido","timestamp":"2026-02-03T22:09:18.941Z"}
+{"error":"jwt malformed","level":"error","message":"Token inválido","timestamp":"2026-02-03T22:09:22.654Z"}
+{"error":"(0 , pevService_1.listarPevs) is not a function","level":"error","message":"Erro ao listar PEVs","timestamp":"2026-02-03T22:13:33.352Z"}
+{"error":"(0 , pevService_1.listarPevs) is not a function","level":"error","message":"Erro ao listar PEVs","timestamp":"2026-02-03T22:18:09.587Z"}
+{"error":"Can't extract geo keys: { _id: ObjectId('69827573573f031b74ea9294'), nome: \"cesar\", descricao: \"123\", localizacao: { type: \"Point\", coordinates: [ 231313, 123123 ] }, __v: 0 }  Longitude/latitude is out of bounds, lng: 231313 lat: 123123","level":"error","message":"Erro ao criar PEV","timestamp":"2026-02-03T22:23:47.138Z"}
+{"error":"jwt malformed","level":"error","message":"Token inválido","timestamp":"2026-02-03T22:25:57.234Z"}
+{"error":"jwt malformed","level":"error","message":"Token inválido","timestamp":"2026-02-03T22:25:58.575Z"}
+{"error":"jwt malformed","level":"error","message":"Token inválido","timestamp":"2026-02-03T22:26:13.285Z"}
+{"error":"jwt malformed","level":"error","message":"Token inválido","timestamp":"2026-02-03T22:26:14.312Z"}
+{"error":"jwt malformed","level":"error","message":"Token inválido","timestamp":"2026-02-03T22:26:16.768Z"}
+{"error":"jwt malformed","level":"error","message":"Token inválido","timestamp":"2026-02-03T22:26:26.432Z"}
+{"error":"jwt malformed","level":"error","message":"Token inválido","timestamp":"2026-02-03T22:28:07.432Z"}

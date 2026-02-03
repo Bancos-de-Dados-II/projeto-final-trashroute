@@ -18,3 +18,98 @@
 {"email":"cesar@gmail","level":"info","message":"Login realizado com sucesso","role":"CIDADAO","timestamp":"2026-02-03T21:57:24.210Z"}
 {"ip":"::1","level":"info","message":"POST /auth/login","timestamp":"2026-02-03T21:57:39.235Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
 {"email":"cesar@gmail","level":"info","message":"Login realizado com sucesso","role":"CIDADAO","timestamp":"2026-02-03T21:57:39.370Z"}
+{"ip":"::1","level":"info","message":"POST /auth/login","timestamp":"2026-02-03T22:08:25.196Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"POST /auth/login","timestamp":"2026-02-03T22:08:25.206Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"email":"cesar@gmail","level":"info","message":"Login realizado com sucesso","role":"CIDADAO","timestamp":"2026-02-03T22:08:25.336Z"}
+{"email":"cesar@gmail","level":"info","message":"Login realizado com sucesso","role":"CIDADAO","timestamp":"2026-02-03T22:08:25.340Z"}
+{"ip":"::1","level":"info","message":"GET /pevs","timestamp":"2026-02-03T22:08:27.488Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"email":"cesar@gmail","level":"info","message":"Token verificado","timestamp":"2026-02-03T22:08:27.491Z","userId":"69826efb13a11d459278583a"}
+{"error":"(0 , pevService_1.listarPevs) is not a function","level":"error","message":"Erro ao listar PEVs","timestamp":"2026-02-03T22:08:27.492Z"}
+{"ip":"::1","level":"info","message":"GET /pevs","timestamp":"2026-02-03T22:08:29.531Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"email":"cesar@gmail","level":"info","message":"Token verificado","timestamp":"2026-02-03T22:08:29.532Z","userId":"69826efb13a11d459278583a"}
+{"error":"(0 , pevService_1.listarPevs) is not a function","level":"error","message":"Erro ao listar PEVs","timestamp":"2026-02-03T22:08:29.533Z"}
+{"ip":"::1","level":"info","message":"POST /auth/login","timestamp":"2026-02-03T22:08:44.810Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"POST /auth/login","timestamp":"2026-02-03T22:08:44.813Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"email":"cesar@gmail","level":"info","message":"Login realizado com sucesso","role":"CIDADAO","timestamp":"2026-02-03T22:08:44.940Z"}
+{"email":"cesar@gmail","level":"info","message":"Login realizado com sucesso","role":"CIDADAO","timestamp":"2026-02-03T22:08:44.942Z"}
+{"ip":"::1","level":"info","message":"GET /pevs","timestamp":"2026-02-03T22:08:45.836Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"email":"cesar@gmail","level":"info","message":"Token verificado","timestamp":"2026-02-03T22:08:45.837Z","userId":"69826efb13a11d459278583a"}
+{"error":"(0 , pevService_1.listarPevs) is not a function","level":"error","message":"Erro ao listar PEVs","timestamp":"2026-02-03T22:08:45.837Z"}
+{"ip":"::1","level":"info","message":"POST /auth/register","timestamp":"2026-02-03T22:09:07.760Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"level":"info","message":"Usuário registrado: mayran@gmail","timestamp":"2026-02-03T22:09:07.897Z","userId":"698272030df20b73d1520600"}
+{"ip":"::1","level":"info","message":"POST /auth/login","timestamp":"2026-02-03T22:09:13.185Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"POST /auth/login","timestamp":"2026-02-03T22:09:13.188Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"email":"mayran@gmail","level":"info","message":"Login realizado com sucesso","role":"CIDADAO","timestamp":"2026-02-03T22:09:13.310Z"}
+{"email":"mayran@gmail","level":"info","message":"Login realizado com sucesso","role":"CIDADAO","timestamp":"2026-02-03T22:09:13.313Z"}
+{"ip":"::1","level":"info","message":"GET /pevs","timestamp":"2026-02-03T22:09:18.941Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"error":"jwt malformed","level":"error","message":"Token inválido","timestamp":"2026-02-03T22:09:18.941Z"}
+{"ip":"::1","level":"info","message":"GET /pevs","timestamp":"2026-02-03T22:09:22.654Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"error":"jwt malformed","level":"error","message":"Token inválido","timestamp":"2026-02-03T22:09:22.654Z"}
+{"ip":"::1","level":"info","message":"POST /auth/login","timestamp":"2026-02-03T22:13:32.031Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"POST /auth/login","timestamp":"2026-02-03T22:13:32.043Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"email":"cesar@gmail","level":"info","message":"Login realizado com sucesso","role":"CIDADAO","timestamp":"2026-02-03T22:13:32.178Z"}
+{"email":"cesar@gmail","level":"info","message":"Login realizado com sucesso","role":"CIDADAO","timestamp":"2026-02-03T22:13:32.181Z"}
+{"ip":"::1","level":"info","message":"GET /pevs","timestamp":"2026-02-03T22:13:33.348Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"email":"cesar@gmail","level":"info","message":"Token verificado","timestamp":"2026-02-03T22:13:33.351Z","userId":"69826efb13a11d459278583a"}
+{"error":"(0 , pevService_1.listarPevs) is not a function","level":"error","message":"Erro ao listar PEVs","timestamp":"2026-02-03T22:13:33.352Z"}
+{"ip":"::1","level":"info","message":"POST /pevs","timestamp":"2026-02-03T22:13:44.243Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"email":"cesar@gmail","level":"info","message":"Token verificado","timestamp":"2026-02-03T22:13:44.244Z","userId":"69826efb13a11d459278583a"}
+{"ip":"::1","level":"info","message":"POST /pevs","timestamp":"2026-02-03T22:13:47.334Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"email":"cesar@gmail","level":"info","message":"Token verificado","timestamp":"2026-02-03T22:13:47.335Z","userId":"69826efb13a11d459278583a"}
+{"ip":"::1","level":"info","message":"GET /api/pevs","timestamp":"2026-02-03T22:16:18.873Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"GET /api/pevs","timestamp":"2026-02-03T22:16:19.376Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"GET /api/pevs","timestamp":"2026-02-03T22:16:19.556Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"GET /api/pevs","timestamp":"2026-02-03T22:16:19.773Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"GET /api/pevs","timestamp":"2026-02-03T22:16:20.005Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"GET /api/pevs","timestamp":"2026-02-03T22:16:20.231Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"POST /api/auth/login","timestamp":"2026-02-03T22:16:33.142Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"POST /api/auth/login","timestamp":"2026-02-03T22:16:42.224Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"POST /api/auth/login","timestamp":"2026-02-03T22:16:53.368Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"POST /api/auth/register","timestamp":"2026-02-03T22:16:59.906Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"POST /auth/login","timestamp":"2026-02-03T22:17:19.235Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"email":"cesar@gmail","level":"info","message":"Login realizado com sucesso","role":"CIDADAO","timestamp":"2026-02-03T22:17:19.363Z"}
+{"ip":"::1","level":"info","message":"GET /api/pevs","timestamp":"2026-02-03T22:17:20.391Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"GET /api/pevs","timestamp":"2026-02-03T22:17:21.642Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"POST /api/pevs","timestamp":"2026-02-03T22:17:41.709Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"POST /api/pevs","timestamp":"2026-02-03T22:17:44.523Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"GET /pevs","timestamp":"2026-02-03T22:18:09.585Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"email":"cesar@gmail","level":"info","message":"Token verificado","timestamp":"2026-02-03T22:18:09.587Z","userId":"69826efb13a11d459278583a"}
+{"error":"(0 , pevService_1.listarPevs) is not a function","level":"error","message":"Erro ao listar PEVs","timestamp":"2026-02-03T22:18:09.587Z"}
+{"ip":"::1","level":"info","message":"POST /pevs","timestamp":"2026-02-03T22:18:21.164Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"email":"cesar@gmail","level":"info","message":"Token verificado","timestamp":"2026-02-03T22:18:21.165Z","userId":"69826efb13a11d459278583a"}
+{"ip":"::1","level":"info","message":"POST /api/auth/login","timestamp":"2026-02-03T22:22:11.200Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"POST /api/auth/login","timestamp":"2026-02-03T22:22:18.366Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"POST /api/auth/login","timestamp":"2026-02-03T22:22:23.437Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"POST /api/auth/register","timestamp":"2026-02-03T22:22:47.861Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"POST /auth/login","timestamp":"2026-02-03T22:23:37.330Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"POST /auth/login","timestamp":"2026-02-03T22:23:37.332Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"email":"cesar@gmail","level":"info","message":"Login realizado com sucesso","role":"CIDADAO","timestamp":"2026-02-03T22:23:37.457Z"}
+{"email":"cesar@gmail","level":"info","message":"Login realizado com sucesso","role":"CIDADAO","timestamp":"2026-02-03T22:23:37.462Z"}
+{"ip":"::1","level":"info","message":"POST /pevs","timestamp":"2026-02-03T22:23:47.058Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"email":"cesar@gmail","level":"info","message":"Token verificado","timestamp":"2026-02-03T22:23:47.059Z","userId":"69826efb13a11d459278583a"}
+{"error":"Can't extract geo keys: { _id: ObjectId('69827573573f031b74ea9294'), nome: \"cesar\", descricao: \"123\", localizacao: { type: \"Point\", coordinates: [ 231313, 123123 ] }, __v: 0 }  Longitude/latitude is out of bounds, lng: 231313 lat: 123123","level":"error","message":"Erro ao criar PEV","timestamp":"2026-02-03T22:23:47.138Z"}
+{"ip":"::1","level":"info","message":"POST /pevs","timestamp":"2026-02-03T22:25:25.595Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"email":"cesar@gmail","level":"info","message":"Token verificado","timestamp":"2026-02-03T22:25:25.601Z","userId":"69826efb13a11d459278583a"}
+{"adminId":"69826efb13a11d459278583a","level":"info","message":"PEV criado","nome":"cesar","pevId":"698275d536a06a26c719220e","timestamp":"2026-02-03T22:25:25.961Z"}
+{"ip":"::1","level":"info","message":"POST /auth/login","timestamp":"2026-02-03T22:25:54.410Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"POST /auth/login","timestamp":"2026-02-03T22:25:54.419Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"email":"mayran@gmail","level":"info","message":"Login realizado com sucesso","role":"CIDADAO","timestamp":"2026-02-03T22:25:54.543Z"}
+{"email":"mayran@gmail","level":"info","message":"Login realizado com sucesso","role":"CIDADAO","timestamp":"2026-02-03T22:25:54.544Z"}
+{"ip":"::1","level":"info","message":"GET /pevs","timestamp":"2026-02-03T22:25:57.234Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"error":"jwt malformed","level":"error","message":"Token inválido","timestamp":"2026-02-03T22:25:57.234Z"}
+{"ip":"::1","level":"info","message":"GET /pevs","timestamp":"2026-02-03T22:25:58.575Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"error":"jwt malformed","level":"error","message":"Token inválido","timestamp":"2026-02-03T22:25:58.575Z"}
+{"ip":"::1","level":"info","message":"GET /pevs","timestamp":"2026-02-03T22:26:13.284Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"error":"jwt malformed","level":"error","message":"Token inválido","timestamp":"2026-02-03T22:26:13.285Z"}
+{"ip":"::1","level":"info","message":"GET /pevs","timestamp":"2026-02-03T22:26:14.312Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"error":"jwt malformed","level":"error","message":"Token inválido","timestamp":"2026-02-03T22:26:14.312Z"}
+{"ip":"::1","level":"info","message":"GET /pevs","timestamp":"2026-02-03T22:26:16.767Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"error":"jwt malformed","level":"error","message":"Token inválido","timestamp":"2026-02-03T22:26:16.768Z"}
+{"ip":"::1","level":"info","message":"GET /pevs","timestamp":"2026-02-03T22:26:26.431Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"error":"jwt malformed","level":"error","message":"Token inválido","timestamp":"2026-02-03T22:26:26.432Z"}
+{"ip":"::1","level":"info","message":"GET /pevs","timestamp":"2026-02-03T22:28:07.432Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"error":"jwt malformed","level":"error","message":"Token inválido","timestamp":"2026-02-03T22:28:07.432Z"}
+{"ip":"::1","level":"info","message":"POST /auth/login","timestamp":"2026-02-03T22:29:52.295Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"ip":"::1","level":"info","message":"POST /auth/login","timestamp":"2026-02-03T22:29:52.297Z","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/144.0.0.0 Safari/537.36"}
+{"email":"cesar@gmail","level":"info","message":"Login realizado com sucesso","role":"CIDADAO","timestamp":"2026-02-03T22:29:52.458Z"}
+{"email":"cesar@gmail","level":"info","message":"Login realizado com sucesso","role":"CIDADAO","timestamp":"2026-02-03T22:29:52.465Z"}

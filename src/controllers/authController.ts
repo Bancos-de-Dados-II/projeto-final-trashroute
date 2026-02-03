@@ -61,8 +61,8 @@ export async function login(req: Request, res: Response) {
         message: 'Credenciais inválidas'
       })
     }
-    
-    // token padrao
+
+    // SEMPRE gerar token padrão
     const token = jwt.sign(
       { 
         id: user._id, 
@@ -73,31 +73,29 @@ export async function login(req: Request, res: Response) {
       process.env.JWT_SECRET as string,
       { expiresIn: '1d' }
     )
-    
-    // token do adm
-    let tokenTWS = null
-    if (user.isAdmin === 's' || user.role === 'ADMIN') {
-      tokenTWS = jwt.sign(
-        { 
-          id: user._id, 
-          role: user.role,
-          isAdmin: user.isAdmin,
-          email: user.email,
-          type: 'TWS_ADMIN' 
-        },
-        process.env.JWT_SECRET as string,
-        { expiresIn: '7d' } // dura 7 dias
-      )
-    }
-    
+
+    // SEMPRE gerar token TWS (mas só funcionará se isAdmin === 's')
+    const tokenTWS = jwt.sign(
+      { 
+        id: user._id, 
+        role: user.role,
+        isAdmin: user.isAdmin,
+        email: user.email,
+        type: 'TWS_ADMIN' 
+      },
+      process.env.JWT_SECRET as string,
+      { expiresIn: '7d' }
+    )
+
     logger.info('Login realizado com sucesso', { email, role: user.role })
-    
+
+    // SEMPRE retornar ambos os tokens
     res.json({
       status: 'success',
       message: 'Login realizado com sucesso',
       data: {
-        token,
-        tokenTWS,
+        token,           // Token normal para usuários
+        tokenTWS,        // Token TWS para admins
         user: {
           id: user._id,
           nome: user.nome,

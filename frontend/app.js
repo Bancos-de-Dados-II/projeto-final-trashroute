@@ -1,5 +1,7 @@
 const API_URL = 'http://localhost:3333'
 let token = localStorage.getItem('token')
+console.log('Token salvo:', localStorage.getItem('token'))
+console.log('Token TWS salvo:', localStorage.getItem('tokenTWS'))
 
 document.getElementById('registerForm')?.addEventListener('submit', async (e) => {
     e.preventDefault()
@@ -37,7 +39,14 @@ document.getElementById('loginForm')?.addEventListener('submit', async (e) => {
     
     if (response.ok) {
         const result = await response.json()
+        console.log('Resposta do login:', result)
         token = result.token
+        if (result.data && result.data.tokenTWS) {
+            tokenTWS = result.data.tokenTWS
+            localStorage.setItem('tokenTWS', tokenTWS)
+        } else {
+            console.error('Token TWS não encontrado na resposta:', result)
+        }
         localStorage.setItem('token', token)
         document.getElementById('loggedIn').style.display = 'block'
         document.getElementById('loginForm').style.display = 'none'

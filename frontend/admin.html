@@ -87,6 +87,41 @@
             localStorage.removeItem('tokenTWS')
             window.location.href = 'index.html'
         }
+        async function listarUsuarios() {
+        document.getElementById('formPEV').style.display = 'none'
+        document.getElementById('adminMenu').style.display = 'block'
+
+        try {
+            const response = await fetch(`${API_URL}/usuarios`, {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${tokenTWS}`
+                }
+            })
+
+            const result = await response.json()
+
+            if (!response.ok) {
+                alert(result.message || 'Erro ao listar usuários')
+                return
+            }
+
+            let html = '<h3>Usuários</h3><ul>'
+
+            result.forEach(user => {
+                html += `<li>
+                    ${user.nome} - ${user.email} - ${user.role}
+                </li>`
+            })
+
+            html += '</ul>'
+
+            document.getElementById('resultado').innerHTML = html
+
+        } catch (error) {
+            alert('Erro de conexão')
+        }
+    }
     </script>
 </body>
 </html>

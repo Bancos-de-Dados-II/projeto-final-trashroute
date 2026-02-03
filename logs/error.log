@@ -15,3 +15,15 @@
 {"error":"jwt malformed","level":"error","message":"Token inválido","timestamp":"2026-02-03T22:26:16.768Z"}
 {"error":"jwt malformed","level":"error","message":"Token inválido","timestamp":"2026-02-03T22:26:26.432Z"}
 {"error":"jwt malformed","level":"error","message":"Token inválido","timestamp":"2026-02-03T22:28:07.432Z"}
+{"error":"jwt malformed","level":"error","message":"Token inválido","timestamp":"2026-02-03T22:38:43.372Z"}
+{"error":"jwt malformed","level":"error","message":"Token inválido","timestamp":"2026-02-03T22:38:43.949Z"}
+{"error":"jwt malformed","level":"error","message":"Token inválido","timestamp":"2026-02-03T22:38:44.470Z"}
+{"error":"jwt malformed","level":"error","message":"Token inválido","timestamp":"2026-02-03T22:38:46.885Z"}
+{"error":"jwt malformed","level":"error","message":"Token inválido","timestamp":"2026-02-03T22:50:40.000Z"}
+{"error":"jwt malformed","level":"error","message":"Token inválido","timestamp":"2026-02-03T22:50:41.349Z"}
+{"error":"jwt malformed","level":"error","message":"Token inválido","timestamp":"2026-02-03T22:50:43.194Z"}
+{"error":"(0 , pevService_1.listarPevs) is not a function","level":"error","message":"Erro ao listar PEVs","timestamp":"2026-02-03T22:53:53.704Z"}
+{"error":"(0 , pevService_1.listarPevs) is not a function","level":"error","message":"Erro ao listar PEVs","timestamp":"2026-02-03T22:53:56.366Z"}
+{"error":"(0 , pevService_1.listarPevs) is not a function","level":"error","message":"Erro ao listar PEVs","timestamp":"2026-02-03T22:56:12.897Z"}
+{"error":"(0 , pevService_1.listarPevs) is not a function","level":"error","message":"Erro ao listar PEVs","timestamp":"2026-02-03T22:56:13.817Z"}
+{"error":"(0 , pevService_1.listarPevs) is not a function","level":"error","message":"Erro ao listar PEVs","timestamp":"2026-02-03T22:56:14.987Z"}

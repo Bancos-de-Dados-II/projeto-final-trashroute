@@ -35,11 +35,25 @@
     <script src="app.js"></script>
     <script>
         
-        function logout() {
+function logout() {
   localStorage.removeItem('token')
   localStorage.removeItem('tokenTWS')
   localStorage.removeItem('user')
   window.location.href = 'index.html'
+}
+
+
+async function listarPEVs() {
+    try {
+        fetch('http://localhost:3333/pevs', {
+  headers: {
+    Authorization: `Bearer ${tokenTWS}`
+  }
+})
+
+    } catch (error) {
+        alert('fodase')
+    }
 }
 
 document.getElementById('loginForm')?.addEventListener('submit', async (e) => {

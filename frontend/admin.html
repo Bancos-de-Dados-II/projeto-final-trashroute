@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trash Route - Admin</title>
+</head>
+<body>
+    <h1>Painel Administrativo</h1>
+    
+    <div id="adminMenu">
+        <h2>Menu Admin</h2>
+        <button onclick="criarPEV()">Criar PEV</button>
+        <button onclick="listarUsuarios()">Listar Usuários</button>
+        <button onclick="promoverUsuario()">Promover Usuário</button>
+        <button onclick="logout()">Sair</button>
+    </div>
+    
+    <div id="formPEV" style="display:none;">
+        <h3>Criar Novo PEV</h3>
+        <form id="pevForm">
+            <input type="text" placeholder="Nome do PEV" name="nome" required>
+            <input type="text" placeholder="Descrição" name="descricao">
+            <input type="number" step="any" placeholder="Latitude" name="latitude" required>
+            <input type="number" step="any" placeholder="Longitude" name="longitude" required>
+            <button type="submit">Criar PEV</button>
+            <button type="button" onclick="cancelarForm()">Cancelar</button>
+        </form>
+    </div>
+    
+    <div id="resultado"></div>
+    
+    <script>
+        const API_URL = 'http://localhost:3333'
+        const tokenTWS = localStorage.getItem('tokenTWS')
+        
+        if (!tokenTWS) {
+            alert('Acesso negado. Faça login como admin.')
+            window.location.href = 'index.html'
+        }
+        
+        async function criarPEV() {
+            document.getElementById('adminMenu').style.display = 'none'
+            document.getElementById('formPEV').style.display = 'block'
+        }
+        
+        document.getElementById('pevForm').addEventListener('submit', async (e) => {
+            e.preventDefault()
+            
+            const data = {
+                nome: e.target.nome.value,
+                descricao: e.target.descricao.value,
+                latitude: parseFloat(e.target.latitude.value),
+                longitude: parseFloat(e.target.longitude.value)
+            }
+            
+            try {
+                const response = await fetch(`${API_URL}/pevs`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': `Bearer ${tokenTWS}`
+                    },
+                    body: JSON.stringify(data)
+                })
+                
+                const result = await response.json()
+                
+                if (response.ok) {
+                    alert('PEV criado com sucesso!')
+                    document.getElementById('pevForm').reset()
+                    document.getElementById('formPEV').style.display = 'none'
+                    document.getElementById('adminMenu').style.display = 'block'
+                } else {
+                    alert(`Erro: ${result.message}`)
+                }
+            } catch (error) {
+                alert('Erro de conexão')
+            }
+        })
+        
+        function cancelarForm() {
+            document.getElementById('pevForm').reset()
+            document.getElementById('formPEV').style.display = 'none'
+            document.getElementById('adminMenu').style.display = 'block'
+        }
+        
+        function logout() {
+            localStorage.removeItem('tokenTWS')
+            window.location.href = 'index.html'
+        }
+    </script>
+</body>
+</html>

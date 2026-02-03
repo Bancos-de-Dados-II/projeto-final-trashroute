@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trash Route</title>
+</head>
+<body>
+    <h1>Trash Route - Gestão de Resíduos</h1>
+    
+    <div>
+        <h2>Cadastro</h2>
+        <form id="registerForm">
+            <input type="text" placeholder="Nome" name="nome" required>
+            <input type="email" placeholder="Email" name="email" required>
+            <input type="password" placeholder="Senha" name="senha" required>
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+    
+    <div>
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="email" placeholder="Email" name="email" required>
+            <input type="password" placeholder="Senha" name="senha" required>
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
+    
+    <div id="loggedIn" style="display:none;">
+        <h2>Área do Usuário</h2>
+        <button onclick="listarPEVs()">Ver PEVs</button>
+        <button onclick="mostrarFormEntrega()">Registrar Entrega</button>
+        <button onclick="logout()">Sair</button>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>

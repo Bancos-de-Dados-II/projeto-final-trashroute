@@ -19,7 +19,21 @@ export async function criarPev(data: CreatePevInput) {
 }
 
 export async function atualizarPev(id: string, data: any) {
-  return Pev.findByIdAndUpdate(id, data, { new: true })
+  const updates: any = { ...data }
+  
+  if (data.latitude !== undefined || data.longitude !== undefined) {
+    updates.localizacao = {
+      type: 'Point',
+      coordinates: [
+        data.longitude !== undefined ? Number(data.longitude) : 0,
+        data.latitude !== undefined ? Number(data.latitude) : 0
+      ]
+    }
+    delete updates.latitude
+    delete updates.longitude
+  }
+  
+  return Pev.findByIdAndUpdate(id, updates, { new: true })
 }
 
 export async function deletarPev(id: string) {

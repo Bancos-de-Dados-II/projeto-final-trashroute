@@ -1,22 +1,22 @@
 import { Request, Response } from 'express'
-import { prisma } from '../database/prisma'
+import { User } from '../models/mongo/User'
 
 export async function listUsuarios(req: Request, res: Response) {
-    try {
-        const usuarios = await prisma.usuario.findMany({
-            select: {
-                id: true,
-                nome: true,
-                email: true,
-                role: true,
-                createdAt: true
-            }
-        })
+  try {
+    const usuarios = await User.find(
+      {},
+      {
+        nome: 1,
+        email: 1,
+        role: 1,
+        createdAt: 1
+      }
+    )
 
-        return res.json(usuarios)
-    } catch (error) {
-        return res.status(500).json({
-            message: 'Erro ao listar usuários'
-        })
-    }
+    res.json(usuarios)
+  } catch (error) {
+    res.status(500).json({
+      message: 'Erro ao listar usuários'
+    })
+  }
 }

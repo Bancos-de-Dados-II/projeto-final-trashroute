@@ -29,3 +29,7 @@ export async function deletarPev(id: string) {
 export async function buscarPevPorId(id: string) {
   return Pev.findById(id)
 }
+
+export async function listarPevs() {
+  return Pev.find()
+}

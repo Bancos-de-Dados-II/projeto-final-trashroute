@@ -19,6 +19,17 @@ app.use((req, res, next) => {
 })
 
 app.use('/uploads', express.static(path.resolve('uploads')))
+
+app.use(express.static(path.resolve('frontend')))
+
+app.get('/', (req, res) => {
+  res.sendFile(path.resolve('frontend/index.html'))
+})
+
+app.get('/admin', (req, res) => {
+  res.sendFile(path.resolve('frontend/admin.html'))
+})
+
 app.use(routes)
 
 app.use(errorHandler)

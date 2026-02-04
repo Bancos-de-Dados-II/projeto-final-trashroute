@@ -1,10 +1,10 @@
 import { Router } from 'express'
-import * as controller from '../controllers/usuarioController'
+import { listUsuarios} from '../controllers/usuarioController'
 import { auth } from '../middlewares/authMiddleware'
 import { isAdmin } from '../middlewares/adminMiddleware'
 
 const router = Router()
 
-router.get('/usuarios', auth, isAdmin, controller.listUsuarios)
+router.get('/usuarios', auth, isAdmin, listUsuarios)
 
 export default router

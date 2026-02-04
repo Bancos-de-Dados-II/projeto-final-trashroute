@@ -3,11 +3,13 @@ import { criarEntrega, listarEntregasUsuario } from '../services/entregaService'
 
 export async function create(req: Request, res: Response) {
   const usuarioId = req.user!.id
-  const { pevId } = req.body
+  const pevId = req.body.pevId
 
-  const imagemUrl = req.file
-    ? `/uploads/${req.file.filename}`
-    : undefined
+  if (!pevId) {
+    return res.status(400).json({ status: 'error', message: 'pevId é obrigatório' })
+  }
+
+  const imagemUrl = req.file ? `/uploads/${req.file.filename}` : undefined
 
   const entrega = await criarEntrega({
     usuarioId,
@@ -15,11 +17,14 @@ export async function create(req: Request, res: Response) {
     imagemUrl
   })
 
-  res.status(201).json(entrega)
+  res.status(201).json({ status: 'success', data: entrega })
 }
 
 export async function listMine(req: Request, res: Response) {
   const usuarioId = req.user!.id
   const entregas = await listarEntregasUsuario(usuarioId)
-  res.json(entregas)
+  res.json({ 
+    status: 'success', 
+    data: entregas 
+  })
 }

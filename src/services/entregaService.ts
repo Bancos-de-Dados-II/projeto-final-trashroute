@@ -11,6 +11,8 @@ export function criarEntrega(dados: {
   })
 }
 
-export function listarEntregasUsuario(usuarioId: string) {
+export async function listarEntregasUsuario(usuarioId: string) {
   return EntregaReciclavel.find({ usuarioId })
+  .populate({ path: 'pevId', select: 'nome' })
+  .sort({ dataEntrega: -1 })
 }

@@ -4,7 +4,7 @@ export async function criarRelacionamentoUsuarioPev(
   usuarioId: string, 
   pevId: string, 
   tipo: string
-) {
+  ) {
   const session = driver.session()
   try {
     await session.run(

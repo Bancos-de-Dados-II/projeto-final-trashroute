@@ -1,9 +1,9 @@
-import dotenv from 'dotenv'
+import 'dotenv/config'
+
 import app from './app'
 import { connectMongo } from './config/mongo'
 import pevRoutes from './routes/pev.routes'
 
-dotenv.config()
 connectMongo().then(() => {
   console.log('✅ MongoDB conectado')
 })

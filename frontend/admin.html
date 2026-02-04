@@ -67,7 +67,6 @@ async function togglePEVs() {
 
 async function editarPEV(id) {
     try {
-        // Buscar dados do PEV
         const res = await fetch(`${API_URL}/pevs/${id}`, {
             headers: { Authorization: `Bearer ${tokenTWS}` }
         })
@@ -80,10 +79,8 @@ async function editarPEV(id) {
         const result = await res.json()
         const pev = result.data
         
-        // Extrair lat/lon das coordenadas
         const [longitude, latitude] = pev.localizacao.coordinates
         
-        // Criar formulário de edição
         const div = document.getElementById('formPEV')
         div.innerHTML = `
             <button onclick="toggleFormPEV()">X</button>
@@ -163,6 +160,7 @@ async function excluirPEV(id) {
     }
 }
 
+
 let usuariosVisivel = false
 async function toggleUsuarios() {
     const div = document.getElementById('usuariosContainer')
@@ -179,7 +177,7 @@ async function toggleUsuarios() {
             html += `
                 <li>
                     ${u.nome} | ${u.email} | ${role}
-                    <button onclick="editarUsuario('${u._id || u.id || ''}')">Editar</button>
+                    <button onclick="adminUsuario('${u._id || u.id || ''}')">Tornar Admin</button>
                     <button onclick="excluirUsuario('${u._id || u.id || ''}')">Excluir</button>
                 </li>
             `
@@ -195,12 +193,52 @@ async function toggleUsuarios() {
     }
 }
 
-function editarUsuario(id) {
-    alert(`(placeholder) Editar usuário: ${id}`)
+async function adminUsuario(id) {
+  const token = tokenTWS
+  if (!token) return alert('Você precisa estar logado.')
+
+  const ok = confirm('Tem certeza que deseja tornar este usuário ADMIN?')
+  if (!ok) return
+
+  const resp = await fetch(`${API_URL}/usuarios/${id}/admin`, {
+    method: 'PATCH',
+    headers: {
+      'Authorization': `Bearer ${token}`
+    }
+  })
+
+  const data = await resp.json().catch(() => ({}))
+
+  if (!resp.ok) {
+    return alert(data.message || 'Erro ao promover usuário')
+  }
+
+  alert('Usuário promovido com sucesso')
+  if (typeof listarUsuarios === 'function') listarUsuarios()
 }
 
-function excluirUsuario(id) {
-    alert(`(placeholder) Excluir usuário: ${id}`)
+async function excluirUsuario(id) {
+  const token = tokenTWS
+  if (!token) return alert('Você precisa estar logado.')
+
+  const ok = confirm('Tem certeza que deseja excluir este usuário? Essa ação não pode ser desfeita.')
+  if (!ok) return
+
+  const resp = await fetch(`${API_URL}/usuarios/${id}`, {
+    method: 'DELETE',
+    headers: {
+      'Authorization': `Bearer ${token}`
+    }
+  })
+
+  const data = await resp.json().catch(() => ({}))
+
+  if (!resp.ok) {
+    return alert(data.message || 'Erro ao excluir usuário')
+  }
+
+  alert(data.message || 'Usuário excluído')
+  if (typeof listarUsuarios === 'function') listarUsuarios()
 }
 
 let formPevVisivel = false

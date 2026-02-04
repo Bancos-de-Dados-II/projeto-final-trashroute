@@ -2,6 +2,9 @@ import { Request, Response } from 'express'
 import { criarEntrega, listarEntregasUsuario } from '../services/entregaService'
 
 export async function create(req: Request, res: Response) {
+  console.log('req.body:', req.body)
+  console.log('req.file:', req.file)
+
   const usuarioId = req.user!.id
   const pevId = req.body.pevId
 
@@ -16,7 +19,7 @@ export async function create(req: Request, res: Response) {
     pevId,
     imagemUrl
   })
-
+  console.log(entrega)
   res.status(201).json({ status: 'success', data: entrega })
 }
 

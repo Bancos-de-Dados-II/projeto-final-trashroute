@@ -44,8 +44,16 @@ export async function createPev(req: Request, res: Response) {
 export async function updatePev(req: Request, res: Response) {
   try {
     const { id } = req.params
-    const updates = req.body
+    const { nome, descricao, latitude, longitude } = req.body
     const adminId = req.user!.id
+    
+    // Preparar os dados para atualização
+    const updates: any = {}
+    
+    if (nome !== undefined) updates.nome = nome
+    if (descricao !== undefined) updates.descricao = descricao
+    if (latitude !== undefined) updates.latitude = Number(latitude)
+    if (longitude !== undefined) updates.longitude = Number(longitude)
     
     const pev = await atualizarPev(id, updates)
     

@@ -1,16 +1,10 @@
-import { Schema, model } from 'mongoose'
+import { z } from 'zod'
 
-const EntregaSchema = new Schema({
-  usuarioId: { type: String, required: true },
-  pevId: {
-  type: Schema.Types.ObjectId,
-  ref: 'PEV',
-  required: true
-},
-  imagemUrl: String,
-  pontos: { type: Number, default: 0 },
-  status: { type: String, enum: ['PENDENTE', 'CONFIRMADA'], default: 'PENDENTE' },
-  dataEntrega: { type: Date, default: Date.now }
+export const entregaSchema = z.object({
+  usuarioId: z.string().min(1),
+  pevId: z.string().min(1),
+  imagemUrl: z.string().optional(),
+  pontos: z.number().int().nonnegative().default(0),
+  status: z.enum(['PENDENTE', 'CONFIRMADA']).default('PENDENTE'),
+  dataEntrega: z.coerce.date().optional()
 })
-
-export const Entrega = model('Entrega', EntregaSchema)

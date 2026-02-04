@@ -1,9 +1,9 @@
-import { RotaColeta } from '../models/mongo/RotaColeta'
+// import { RotaColeta } from '../models/mongo/RotaColeta'
 
-export function criarRota(dados: any) {
-  return RotaColeta.create(dados)
-}
+// export function criarRota(dados: any) {
+//   return RotaColeta.create(dados)
+// }
 
-export function listarRotas() {
-  return RotaColeta.find()
-}
+// export function listarRotas() {
+//   return RotaColeta.find()
+// }

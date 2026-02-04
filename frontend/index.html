@@ -160,20 +160,39 @@ async function mostrarFormEntrega() {
         `
         mostrar('entregaContainer')
 
-        document.getElementById('entregaForm').addEventListener('submit', async (e) => {
-            e.preventDefault()
-            const formData = new FormData()
-            formData.append('pevId', e.target.pevId.value)
-            if (e.target.imagem.files[0]) formData.append('imagem', e.target.imagem.files[0])
+document.getElementById('entregaForm').addEventListener('submit', async (e) => {
+    e.preventDefault()
+    
+    console.log('Form submit disparado') // verifica se o submit é chamado
+    console.log('Select PEV:', e.target.pevId) // verifica se o select está acessível
+    console.log('Valor do PEV selecionado:', e.target.pevId?.value) // verifica o valor
 
-            const resp = await fetch(`${API_URL}/entregas`, {
-                method: 'POST',
-                headers: { 'Authorization': `Bearer ${token}` },
-                body: formData
-            })
-            if (resp.ok) { alert('Entrega registrada! +10 pontos'); e.target.reset() }
-            else { alert('Erro ao registrar entrega') }
-        })
+    const formData = new FormData()
+    formData.append('pevId', e.target.pevId.value)
+    if (e.target.imagem.files[0]) formData.append('imagem', e.target.imagem.files[0])
+
+    console.log('FormData entries:')
+    for (let pair of formData.entries()) {
+        console.log(pair[0]+ ': '+ pair[1])
+    }
+
+    const token = localStorage.getItem('tokenTWS')
+    const resp = await fetch(`${API_URL}/entregas`, {
+        method: 'POST',
+        headers: { 'Authorization': `Bearer ${token}` },
+        body: formData
+    })
+    console.log(`AQUI QUE IMPORTA:${resp}`)
+
+    if (resp.ok) { 
+        alert('Entrega registrada! +10 pontos'); 
+        e.target.reset() 
+    } else { 
+        const err = await resp.text()
+        console.error('Erro do servidor:', err)
+        alert('Erro ao registrar entrega') 
+    }
+})
 
     } catch(err) { console.error(err); alert('Erro de conexão') }
 }

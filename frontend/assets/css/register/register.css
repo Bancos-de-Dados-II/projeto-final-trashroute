@@ -6,7 +6,7 @@
 }
 
 body {
-    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    background: linear-gradient(135deg, #141e30, #243b55);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -22,13 +22,13 @@ h1 {
     letter-spacing: 1px;
 }
 
-/* Card de autenticação */
+/* Card */
 .auth-container {
     background: rgba(255, 255, 255, 0.08);
     padding: 30px;
     border-radius: 14px;
     width: 100%;
-    max-width: 350px;
+    max-width: 380px;
     backdrop-filter: blur(12px);
     box-shadow: 0 8px 25px rgba(0,0,0,0.4);
     animation: fadeIn 0.4s ease-in-out;
@@ -58,13 +58,13 @@ button {
     border: none;
     cursor: pointer;
     font-weight: bold;
-    background-color: #00c896;
+    background-color: #ff9800;
     color: white;
     transition: 0.2s ease-in-out;
 }
 
 button:hover {
-    background-color: #00a77f;
+    background-color: #e68900;
 }
 
 /* Link */
@@ -75,7 +75,7 @@ button:hover {
 }
 
 .auth-container a {
-    color: #00c896;
+    color: #ff9800;
     text-decoration: none;
     font-weight: bold;
 }
@@ -84,7 +84,6 @@ button:hover {
     text-decoration: underline;
 }
 
-/* Animação */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(15px); }
     to { opacity: 1; transform: translateY(0); }

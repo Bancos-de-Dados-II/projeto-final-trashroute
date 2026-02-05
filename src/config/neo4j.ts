@@ -8,6 +8,12 @@ if (!uri) throw new Error('NEO4J_URI não definido no .env')
 if (!user) throw new Error('NEO4J_USER não definido no .env')
 if (!password) throw new Error('NEO4J_PASSWORD não definido no .env')
 
-const driver = neo4j.driver(uri, neo4j.auth.basic(user, password))
+const driver = neo4j.driver(
+    uri,
+    neo4j.auth.basic(user, password),
+    {
+        encrypted: 'ENCRYPTION_OFF' // remova se usar Neo4j Aura
+    }
+)
 
 export default driver

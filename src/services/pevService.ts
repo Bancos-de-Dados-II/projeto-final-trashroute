@@ -1,4 +1,5 @@
 import { Pev } from '../models/mongo/Pev'
+import {deletarPevNoGrafo, upsertPevNoGrafo} from "./grafoService";
 
 type CreatePevInput = {
   nome: string
@@ -8,7 +9,7 @@ type CreatePevInput = {
 }
 
 export async function criarPev(data: CreatePevInput) {
-  return Pev.create({
+  const pev = await Pev.create({
     nome: data.nome,
     descricao: data.descricao,
     localizacao: {
@@ -16,6 +17,16 @@ export async function criarPev(data: CreatePevInput) {
       coordinates: [data.longitude, data.latitude]
     }
   })
+
+  await upsertPevNoGrafo({
+    pevId: pev._id.toString(),
+    nome: pev.nome,
+    descricao: pev.descricao,
+    latitude: data.latitude,
+    longitude: data.longitude
+  })
+
+  return pev
 }
 
 export async function atualizarPev(id: string, data: any) {
@@ -37,7 +48,13 @@ export async function atualizarPev(id: string, data: any) {
 }
 
 export async function deletarPev(id: string) {
-  return Pev.findByIdAndDelete(id)
+  const pev = await Pev.findByIdAndDelete(id)
+
+  if (pev) {
+    await deletarPevNoGrafo(id)
+  }
+
+  return pev
 }
 
 export async function buscarPevPorId(id: string) {

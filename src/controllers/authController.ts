@@ -8,7 +8,7 @@ import logger from '../utils/logger'
 export async function register(req: Request, res: Response) {
   try {
     const user = await criarUsuario(req.body)
-    
+    console.log(user)
     logger.info(`Usuário registrado: ${user.email}`, { userId: user._id })
     
     res.status(201).json({
@@ -30,11 +30,6 @@ export async function register(req: Request, res: Response) {
         message: 'Email já cadastrado'
       })
     }
-    
-    res.status(500).json({
-      status: 'error',
-      message: 'Erro interno no servidor'
-    })
   }
 }
 

@@ -2,7 +2,7 @@ import { User } from '../models/mongo/User'
 import bcrypt from 'bcrypt'
 import logger from '../utils/logger'
 
-import { upsertUsuarioNoGrafo } from './grafoService'
+import {deletarUsuarioNoGrafo, upsertUsuarioNoGrafo} from './grafoService'
 
 export async function criarUsuario(dados: any) {
   const senhaHash = await bcrypt.hash(dados.senha, 10)
@@ -56,17 +56,11 @@ export async function tornarAdmin(userId: string, adminId: string) {
 }
 
 export async function deletarUsuario(userId: string, adminId: string) {
-  try {
-    const user = await User.findByIdAndDelete(userId)
+  const user = await User.findByIdAndDelete(userId)
 
-    logger.info('Usuário deletado', {
-      userId,
-      deletedBy: adminId
-    })
-
-    return user
-  } catch (error: any) {
-    logger.error('Erro ao deletar usuário', { error: error.message })
-    throw error
+  if (user) {
+    await deletarUsuarioNoGrafo(userId)
   }
+
+  return user
 }

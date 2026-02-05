@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    min-height: 100vh;
+    color: #fff;
+    padding: 30px;
+}
+
+/* Título principal */
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+    letter-spacing: 1px;
+}
+
+/* Containers principais */
+#authForms {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+#authForms > div {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 25px;
+    border-radius: 12px;
+    width: 300px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+#authForms h2 {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Inputs */
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+}
+
+/* Botões */
+button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.2s ease-in-out;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+/* Botões principais */
+form button {
+    background-color: #00c896;
+    color: white;
+}
+
+form button:hover {
+    background-color: #00a77f;
+}
+
+/* Área logada */
+#loggedIn {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#welcomeUser {
+    margin-bottom: 20px;
+}
+
+/* Botões do painel */
+#loggedIn > button {
+    margin: 5px 5px 15px 5px;
+    background-color: #ffffff;
+    color: #203a43;
+    width: auto;
+    padding: 8px 15px;
+}
+
+#loggedIn > button:hover {
+    background-color: #dcdcdc;
+}
+
+/* Caixas de resultado */
+#resultado,
+#entregaContainer,
+#minhasEntregas {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    text-align: left;
+}
+
+/* Listas */
+ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+li {
+    padding: 8px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+/* Botão X */
+#resultado button,
+#minhasEntregas button,
+#entregaContainer button:first-child {
+    background: #ff4d4d;
+    color: white;
+    width: auto;
+    padding: 5px 10px;
+    margin-bottom: 10px;
+}
+
+#resultado button:hover,
+#minhasEntregas button:hover,
+#entregaContainer button:first-child:hover {
+    background: #cc0000;
+}
+
+@media (max-width: 768px) {
+    #authForms {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #authForms > div {
+        width: 100%;
+        max-width: 350px;
+    }
+}

@@ -1,14 +1,26 @@
 import { EntregaReciclavel } from '../models/mongo/EntregaReciclavel'
+import {registrarEntregaReciclavelNoGrafo} from "./grafoService";
 
-export function criarEntrega(dados: {
+export async function criarEntrega(dados: {
   usuarioId: string
   pevId: string
   imagemUrl?: string
 }) {
-  return EntregaReciclavel.create({
+  const entrega = await EntregaReciclavel.create({
     ...dados,
     pontos: 10
   })
+
+  await registrarEntregaReciclavelNoGrafo({
+    entregaId: entrega._id.toString(),
+    usuarioId: dados.usuarioId,
+    pevId: dados.pevId,
+    status: 'CONFIRMADA',
+    pontos: entrega.pontos,
+    dataEntrega: entrega.dataEntrega
+  })
+
+  return entrega
 }
 
 export async function listarEntregasUsuario(usuarioId: string) {

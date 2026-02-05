@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Trash Route - Cadastro</title>
+    <link rel="stylesheet" href="./assets/css/register/register.css">
+</head>
+<body>
+
+<h1>Trash Route</h1>
+
+<div class="auth-container">
+    <h2>Cadastro</h2>
+    <form id="registerForm">
+        <input type="text" placeholder="Nome" name="nome" required>
+        <input type="email" placeholder="Email" name="email" required>
+        <input type="password" placeholder="Senha" name="senha" required>
+        <button type="submit">Cadastrar</button>
+    </form>
+
+    <p>
+        Já tem conta?
+        <a href="index.html">Fazer login</a>
+    </p>
+</div>
+
+<script>
+    const API_URL = 'http://localhost:3333'
+
+    document.getElementById('registerForm').addEventListener('submit', async (e) => {
+        e.preventDefault()
+
+        const data = {
+            nome: e.target.nome.value,
+            email: e.target.email.value,
+            senha: e.target.senha.value
+        }
+
+        const res = await fetch(`${API_URL}/auth/register`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        })
+
+        if (res.ok) {
+            alert('Cadastro realizado com sucesso!')
+            window.location.href = 'index.html'
+        } else {
+            const err = await res.json()
+            alert(err.message || 'Erro no cadastro')
+        }
+    })
+</script>
+
+</body>
+</html>

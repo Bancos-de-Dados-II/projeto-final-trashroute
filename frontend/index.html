@@ -1,61 +1,102 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
-    <title>Trash Route - Login</title>
-    <link rel="stylesheet" href="./assets/css/index/index.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trash Route</title>
+  <link rel="stylesheet" href="./style.css" />
 </head>
-<body>
 
-<h1>Trash Route</h1>
+<body data-page="user">
+  <div class="container">
+    <div class="header">
+      <div class="brand">
+        <div class="logo"></div>
+        <div>
+          <h1>Trash Route</h1>
+          <p class="sub">Gestão de resíduos • Interface do usuário</p>
+        </div>
+      </div>
 
-<div class="auth-container">
-    <h2>Login</h2>
-    <form id="loginForm">
-        <input type="email" placeholder="Email" name="email" required>
-        <input type="password" placeholder="Senha" name="senha" required>
-        <button type="submit">Entrar</button>
-    </form>
+      <div class="row">
+        <button class="btn btn-ghost" onclick="logout()">X</button>
+      </div>
+    </div>
 
-    <p>
-        Não tem conta?
-        <a href="register.html">Cadastrar</a>
-    </p>
-</div>
+    <div id="authForms" class="grid">
+      <div class="card">
+        <h2>Cadastro</h2>
+        <form id="registerForm" class="form-grid">
+          <div>
+            <label>Nome</label>
+            <input type="text" placeholder="Seu nome" name="nome" required />
+          </div>
 
-<script>
-    const API_URL = 'http://localhost:3333'
+          <div>
+            <label>Email</label>
+            <input type="email" placeholder="seu@email.com" name="email" required />
+          </div>
 
-    document.getElementById('loginForm').addEventListener('submit', async (e) => {
-        e.preventDefault()
+          <div>
+            <label>Senha</label>
+            <input type="password" placeholder="••••••••" name="senha" required />
+          </div>
 
-        const data = {
-            email: e.target.email.value,
-            senha: e.target.senha.value
-        }
+          <div class="actions">
+            <button class="btn btn-primary" type="submit">Cadastrar</button>
+          </div>
+        </form>
+      </div>
 
-        const res = await fetch(`${API_URL}/auth/login`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(data)
-        })
+      <div class="card">
+        <h2>Login</h2>
+        <form id="loginForm" class="form-grid">
+          <div>
+            <label>Email</label>
+            <input type="email" placeholder="seu@email.com" name="email" required />
+          </div>
 
-        if (!res.ok) {
-            alert('Login inválido')
-            return
-        }
+          <div>
+            <label>Senha</label>
+            <input type="password" placeholder="••••••••" name="senha" required />
+          </div>
 
-        const result = await res.json()
+          <div class="actions">
+            <button class="btn btn-primary" type="submit">Entrar</button>
+          </div>
+        </form>
 
-        localStorage.setItem('tokenTWS', result.data.tokenTWS)
-        localStorage.setItem('user', JSON.stringify(result.data.user))
+        <div class="divider"></div>
 
-        if (result.data.user.isAdmin === 's') {
-            window.location.href = 'admin.html'
-        } else {
-            window.location.href = 'user.html'
-        }
-    })
-</script>
+        <div class="row">
+          <span class="badge">Dica</span>
+          <p class="sub" style="margin:0">Se você for admin, você pode ser redirecionado para o painel admin.</p>
+        </div>
+      </div>
+    </div>
 
+    <div id="loggedIn" class="hidden" style="display:none">
+      <div class="card">
+        <div class="row" style="justify-content:space-between; gap: 12px;">
+          <div>
+            <h2 style="margin-bottom:6px">Área do Usuário</h2>
+            <p class="sub" style="margin:0" id="welcomeUser"></p>
+          </div>
+
+          <div class="row" style="flex-wrap:wrap; justify-content:flex-end;">
+            <button class="btn btn-ghost" onclick="togglePEVs()">Ver PEVs</button>
+            <button class="btn btn-ghost" onclick="toggleMinhasEntregas()">Minhas Entregas</button>
+            <button class="btn btn-ghost" onclick="mostrarFormEntrega()">Registrar Entrega</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="resultado" class="card soft hidden" style="display:none"></div>
+      <div id="entregaContainer" class="card soft hidden" style="margin-top:14px; display:none"></div>
+      <div id="minhasEntregas" class="card soft hidden" style="margin-top:14px; display:none"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
 </body>
 </html>

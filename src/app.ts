@@ -3,12 +3,14 @@ import cors from 'cors'
 import routes from './routes'
 import path from 'path'
 import { errorHandler } from './middlewares/errorMiddleware'
+import { auth } from './middlewares/authMiddleware'
+import { isAdmin } from './middlewares/adminMiddleware'
 
 const app = express()
 
 app.use(cors({
   origin: '*',
-  methods: ['GET','POST','PUT','DELETE','OPTIONS'],
+  methods: ['GET','POST','PUT','PATCH','DELETE','OPTIONS'],
   allowedHeaders: ['Content-Type','Authorization']
 }))
 app.use(express.json())
@@ -25,7 +27,7 @@ app.get('/', (req, res) => {
   res.sendFile(path.resolve('frontend/index.html'))
 })
 
-app.get('/admin', (req, res) => {
+app.get('/admin', auth, isAdmin, (req, res) => {
   res.sendFile(path.resolve('frontend/admin.html'))
 })
 

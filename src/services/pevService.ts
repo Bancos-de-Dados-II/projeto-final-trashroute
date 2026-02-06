@@ -1,5 +1,5 @@
 import { Pev } from '../models/mongo/Pev'
-import {deletarPevNoGrafo, upsertPevNoGrafo} from "./grafoService";
+import { deletarPevNoGrafo, upsertPevNoGrafo } from './grafoService'
 
 type CreatePevInput = {
   nome: string
@@ -19,11 +19,11 @@ export async function criarPev(data: CreatePevInput) {
   })
 
   await upsertPevNoGrafo({
-    pevId: pev._id.toString(),
+    id: pev._id.toString(),
     nome: pev.nome,
     descricao: pev.descricao,
-    latitude: data.latitude,
-    longitude: data.longitude
+    latitude: pev.localizacao.coordinates[1],
+    longitude: pev.localizacao.coordinates[0]
   })
 
   return pev
@@ -31,7 +31,7 @@ export async function criarPev(data: CreatePevInput) {
 
 export async function atualizarPev(id: string, data: any) {
   const updates: any = { ...data }
-  
+
   if (data.latitude !== undefined || data.longitude !== undefined) {
     updates.localizacao = {
       type: 'Point',
@@ -43,15 +43,27 @@ export async function atualizarPev(id: string, data: any) {
     delete updates.latitude
     delete updates.longitude
   }
-  
-  return Pev.findByIdAndUpdate(id, updates, { new: true })
+
+  const pev = await Pev.findByIdAndUpdate(id, updates, { new: true })
+
+  if (pev) {
+    await upsertPevNoGrafo({
+      id: pev._id.toString(),
+      nome: pev.nome,
+      descricao: pev.descricao,
+      latitude: pev.localizacao.coordinates[1],
+      longitude: pev.localizacao.coordinates[0]
+    })
+  }
+
+  return pev
 }
 
 export async function deletarPev(id: string) {
   const pev = await Pev.findByIdAndDelete(id)
 
   if (pev) {
-    await deletarPevNoGrafo(id)
+    await deletarPevNoGrafo(pev._id.toString())
   }
 
   return pev

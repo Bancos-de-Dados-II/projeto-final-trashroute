@@ -1,13 +1,46 @@
-import neo4j from 'neo4j-driver'
+import neo4j, { Driver, QueryResult } from 'neo4j-driver'
 
-const uri = process.env.NEO4J_URI
-const user = process.env.NEO4J_USER
-const password = process.env.NEO4J_PASSWORD
+let driver: Driver | null = null
 
-if (!uri) throw new Error('NEO4J_URI não definido no .env')
-if (!user) throw new Error('NEO4J_USER não definido no .env')
-if (!password) throw new Error('NEO4J_PASSWORD não definido no .env')
+export function getNeo4jDriver() {
+  if (driver) return driver
 
-const driver = neo4j.driver(uri, neo4j.auth.basic(user, password))
+  const uri = process.env.NEO4J_URI
+  const user = process.env.NEO4J_USER
+  const password = process.env.NEO4J_PASSWORD
 
-export default driver
+  if (!uri || !user || !password) {
+    throw new Error('NEO4J env vars missing')
+  }
+
+  driver = neo4j.driver(uri, neo4j.auth.basic(user, password))
+  return driver
+}
+
+export async function neo4jWrite<T = unknown>(query: string, params: Record<string, any> = {}) {
+  const d = getNeo4jDriver()
+  const session = d.session()
+  try {
+    const res: QueryResult<T> = await session.executeWrite(tx => tx.run(query, params))
+    return res
+  } finally {
+    await session.close()
+  }
+}
+
+export async function neo4jRead<T = unknown>(query: string, params: Record<string, any> = {}) {
+  const d = getNeo4jDriver()
+  const session = d.session()
+  try {
+    const res: QueryResult<T> = await session.executeRead(tx => tx.run(query, params))
+    return res
+  } finally {
+    await session.close()
+  }
+}
+
+export async function neo4jClose() {
+  if (!driver) return
+  await driver.close()
+  driver = null
+}

@@ -139,3 +139,81 @@
 {"email":"cesar@gmail","level":"info","message":"Token verificado","timestamp":"2026-02-04T14:53:43.018Z","userId":"69826efb13a11d459278583a"}
 {"email":"cesar@gmail","level":"info","message":"Token verificado","timestamp":"2026-02-04T14:53:44.460Z","userId":"69826efb13a11d459278583a"}
 {"email":"cesar@gmail","level":"info","message":"Token verificado","timestamp":"2026-02-04T14:53:46.976Z","userId":"69826efb13a11d459278583a"}
+{"email":"neo@neo","level":"info","message":"Token verificado","timestamp":"2026-02-05T22:08:41.255Z","userId":"698512aed06100ddcf1e3b40"}
+{"email":"neo@neo","level":"info","message":"Token verificado","timestamp":"2026-02-05T22:08:44.262Z","userId":"698512aed06100ddcf1e3b40"}
+{"email":"neo@neo","level":"info","message":"Token verificado","timestamp":"2026-02-05T22:08:45.008Z","userId":"698512aed06100ddcf1e3b40"}
+{"email":"cesar@gmail","level":"info","message":"Login realizado com sucesso","role":"ADMIN","timestamp":"2026-02-05T22:08:59.634Z"}
+{"email":"cesar@gmail","level":"info","message":"Token verificado","timestamp":"2026-02-05T22:09:00.958Z","userId":"69826efb13a11d459278583a"}
+{"email":"cesar@gmail","level":"info","message":"Token verificado","timestamp":"2026-02-05T22:09:01.845Z","userId":"69826efb13a11d459278583a"}
+{"email":"cesar@gmail","level":"info","message":"Token verificado","timestamp":"2026-02-05T22:09:03.559Z","userId":"69826efb13a11d459278583a"}
+{"level":"info","message":"Usuário registrado: mayran@gmail","timestamp":"2026-02-05T22:12:56.976Z","userId":"698515e7ec21abc50b810632"}
+{"email":"mayran@gmail","level":"info","message":"Login realizado com sucesso","role":"CIDADAO","timestamp":"2026-02-05T22:13:05.310Z"}
+{"email":"cesar@gmail","level":"info","message":"Login realizado com sucesso","role":"ADMIN","timestamp":"2026-02-05T22:13:32.013Z"}
+{"email":"cesar@gmail","level":"info","message":"Token verificado","timestamp":"2026-02-05T22:13:42.143Z","userId":"69826efb13a11d459278583a"}
+{"email":"cesar@gmail","level":"info","message":"Token verificado","timestamp":"2026-02-05T22:13:45.941Z","userId":"69826efb13a11d459278583a"}
+{"level":"info","message":"Usuário promovido a admin","promotedBy":"69826efb13a11d459278583a","timestamp":"2026-02-05T22:13:46.628Z","userId":"698515e7ec21abc50b810632"}
+{"email":"cesar@gmail","level":"info","message":"Token verificado","timestamp":"2026-02-05T22:14:44.186Z","userId":"69826efb13a11d459278583a"}
+{"email":"cesar@gmail","level":"info","message":"Token verificado","timestamp":"2026-02-05T22:14:59.460Z","userId":"69826efb13a11d459278583a"}
+{"adminId":"69826efb13a11d459278583a","level":"info","message":"PEV criado","nome":"Casa de Mayran","pevId":"69851663ec21abc50b81063c","timestamp":"2026-02-05T22:14:59.529Z"}
+{"email":"cesar@gmail","level":"info","message":"Token verificado","timestamp":"2026-02-05T22:18:33.399Z","userId":"69826efb13a11d459278583a"}
+{"adminId":"69826efb13a11d459278583a","level":"info","message":"PEV criado","nome":"testeeee","pevId":"6985173921d460762289ebcf","timestamp":"2026-02-05T22:18:33.475Z"}
+{"email":"cesar@gmail","level":"info","message":"Token verificado","timestamp":"2026-02-05T22:21:47.407Z","userId":"69826efb13a11d459278583a"}
+{"error":"Can't extract geo keys: { _id: ObjectId('698517fbb13d2c9dc7be2399'), nome: \"minha casa\", descricao: \"teste\", localizacao: { type: \"Point\", coordinates: [ 2323, 232 ] }, __v: 0 }  Longitude/latitude is out of bounds, lng: 2323 lat: 232","level":"error","message":"Erro ao criar PEV","timestamp":"2026-02-05T22:21:47.481Z"}
+{"email":"cesar@gmail","level":"info","message":"Token verificado","timestamp":"2026-02-05T22:21:52.469Z","userId":"69826efb13a11d459278583a"}
+{"adminId":"69826efb13a11d459278583a","level":"info","message":"PEV criado","nome":"minha casa","pevId":"69851800b13d2c9dc7be239b","timestamp":"2026-02-05T22:21:53.612Z"}
+{"email":"cesar@gmail","level":"info","message":"Token verificado","timestamp":"2026-02-05T22:27:01.269Z","userId":"69826efb13a11d459278583a"}
+{"email":"cesar@gmail","level":"info","message":"Token verificado","timestamp":"2026-02-05T22:27:06.877Z","userId":"69826efb13a11d459278583a"}
+{"email":"cesar@gmail","level":"info","message":"Token verificado","timestamp":"2026-02-05T22:27:13.805Z","userId":"69826efb13a11d459278583a"}
+{"email":"cesar@gmail","level":"info","message":"Token verificado","timestamp":"2026-02-05T22:27:19.726Z","userId":"69826efb13a11d459278583a"}
+{"email":"neo@neo","level":"info","message":"Login realizado com sucesso","role":"CIDADAO","timestamp":"2026-02-05T22:27:32.803Z"}
+{"email":"neo@neo","level":"info","message":"Token verificado","timestamp":"2026-02-05T22:27:33.725Z","userId":"698512aed06100ddcf1e3b40"}
+{"email":"neo@neo","level":"info","message":"Token verificado","timestamp":"2026-02-05T22:27:35.486Z","userId":"698512aed06100ddcf1e3b40"}
+{"email":"neo@neo","level":"info","message":"Token verificado","timestamp":"2026-02-05T22:27:39.810Z","userId":"698512aed06100ddcf1e3b40"}
+{"email":"neo@neo","level":"info","message":"Token verificado","timestamp":"2026-02-05T22:29:22.452Z","userId":"698512aed06100ddcf1e3b40"}
+{"email":"neo@neo","level":"info","message":"Token verificado","timestamp":"2026-02-05T22:29:27.482Z","userId":"698512aed06100ddcf1e3b40"}
+{"email":"neo@neo","level":"info","message":"Token verificado","timestamp":"2026-02-05T22:33:17.270Z","userId":"698512aed06100ddcf1e3b40"}
+{"email":"neo@neo","level":"info","message":"Token verificado","timestamp":"2026-02-05T22:33:21.900Z","userId":"698512aed06100ddcf1e3b40"}
+{"level":"info","message":"Usuário registrado: 1@1","timestamp":"2026-02-05T22:36:12.254Z","userId":"69851b5b13ac5516daac9259"}
+{"email":"1@1","level":"info","message":"Login realizado com sucesso","role":"CIDADAO","timestamp":"2026-02-05T22:36:16.025Z"}
+{"email":"cesar@gmail","level":"info","message":"Login realizado com sucesso","role":"ADMIN","timestamp":"2026-02-05T22:41:21.795Z"}
+{"email":"cesar@gmail","level":"info","message":"Token verificado","timestamp":"2026-02-05T22:41:29.085Z","userId":"69826efb13a11d459278583a"}
+{"adminId":"69826efb13a11d459278583a","level":"info","message":"PEV criado","nome":"meuap","pevId":"69851c9913ac5516daac925d","timestamp":"2026-02-05T22:41:29.811Z"}
+{"email":"cesar@gmail","level":"info","message":"Token verificado","timestamp":"2026-02-05T22:42:30.134Z","userId":"69826efb13a11d459278583a"}
+{"email":"cesar@gmail","level":"info","message":"Token verificado","timestamp":"2026-02-05T22:42:33.911Z","userId":"69826efb13a11d459278583a"}
+{"level":"info","message":"Usuário registrado: cesar@gmail","timestamp":"2026-02-05T22:45:17.764Z","userId":"69851d7d13ac5516daac9262"}
+{"email":"cesar@gmail","level":"info","message":"Login realizado com sucesso","role":"CIDADAO","timestamp":"2026-02-05T22:45:22.165Z"}
+{"email":"cesar@gmail","level":"info","message":"Login realizado com sucesso","role":"ADMIN","timestamp":"2026-02-05T22:45:52.881Z"}
+{"email":"cesar@gmail","level":"info","message":"Token verificado","timestamp":"2026-02-05T22:45:54.813Z","userId":"69851d7d13ac5516daac9262"}
+{"email":"cesar@gmail","level":"info","message":"Token verificado","timestamp":"2026-02-05T22:46:01.943Z","userId":"69851d7d13ac5516daac9262"}
+{"adminId":"69851d7d13ac5516daac9262","level":"info","message":"PEV criado","nome":"Cajazeiras","pevId":"69851da913ac5516daac9267","timestamp":"2026-02-05T22:46:02.609Z"}
+{"email":"cesar@gmail","level":"info","message":"Token verificado","timestamp":"2026-02-05T22:46:06.019Z","userId":"69851d7d13ac5516daac9262"}
+{"email":"cesar@gmail","level":"info","message":"Token verificado","timestamp":"2026-02-05T22:46:09.597Z","userId":"69851d7d13ac5516daac9262"}
+{"email":"cesar@gmail","level":"info","message":"Token verificado","timestamp":"2026-02-05T22:46:13.545Z","userId":"69851d7d13ac5516daac9262"}
+{"email":"cesar@gmail","level":"info","message":"Token verificado","timestamp":"2026-02-05T22:46:42.742Z","userId":"69851d7d13ac5516daac9262"}
+{"adminId":"69851d7d13ac5516daac9262","level":"info","message":"PEV criado","nome":"IFPB","pevId":"69851dd213ac5516daac926d","timestamp":"2026-02-05T22:46:43.395Z"}
+{"email":"cesar@gmail","level":"info","message":"Token verificado","timestamp":"2026-02-05T22:47:45.048Z","userId":"69851d7d13ac5516daac9262"}
+{"email":"cesar@gmail","level":"info","message":"Token verificado","timestamp":"2026-02-05T22:47:48.331Z","userId":"69851d7d13ac5516daac9262"}
+{"email":"cesar@gmail","level":"info","message":"Token verificado","timestamp":"2026-02-05T22:47:52.111Z","userId":"69851d7d13ac5516daac9262"}
+{"email":"cesar@gmail","level":"info","message":"Token verificado","timestamp":"2026-02-05T22:47:56.977Z","userId":"69851d7d13ac5516daac9262"}
+{"email":"cesar@gmail","level":"info","message":"Token verificado","timestamp":"2026-02-05T22:48:01.184Z","userId":"69851d7d13ac5516daac9262"}
+{"level":"info","message":"Usuário registrado: mayran@gmail","timestamp":"2026-02-05T22:50:34.800Z","userId":"69851eba13ac5516daac9276"}
+{"email":"mayran@gmail","level":"info","message":"Login realizado com sucesso","role":"CIDADAO","timestamp":"2026-02-05T22:50:40.322Z"}
+{"email":"mayran@gmail","level":"info","message":"Token verificado","timestamp":"2026-02-05T22:50:42.627Z","userId":"69851eba13ac5516daac9276"}
+{"email":"mayran@gmail","level":"info","message":"Token verificado","timestamp":"2026-02-05T22:50:44.668Z","userId":"69851eba13ac5516daac9276"}
+{"email":"mayran@gmail","level":"info","message":"Token verificado","timestamp":"2026-02-05T22:50:46.419Z","userId":"69851eba13ac5516daac9276"}
+{"email":"mayran@gmail","level":"info","message":"Token verificado","timestamp":"2026-02-05T22:50:47.252Z","userId":"69851eba13ac5516daac9276"}
+{"email":"mayran@gmail","level":"info","message":"Token verificado","timestamp":"2026-02-05T22:50:52.871Z","userId":"69851eba13ac5516daac9276"}
+{"level":"info","message":"Usuário registrado: cesar@gmail","timestamp":"2026-02-05T22:55:34.097Z","userId":"69851fe513ac5516daac927f"}
+{"email":"cesar@gmail","level":"info","message":"Login realizado com sucesso","role":"CIDADAO","timestamp":"2026-02-05T22:55:38.101Z"}
+{"level":"warn","message":"Tentativa de acesso sem token","timestamp":"2026-02-05T22:59:37.305Z"}
+{"level":"warn","message":"Tentativa de acesso sem token","timestamp":"2026-02-05T22:59:43.469Z"}
+{"level":"warn","message":"Tentativa de acesso sem token","timestamp":"2026-02-05T22:59:44.322Z"}
+{"email":"cesar@gmail","level":"info","message":"Login realizado com sucesso","role":"CIDADAO","timestamp":"2026-02-05T22:59:52.883Z"}
+{"level":"warn","message":"Tentativa de acesso sem token","timestamp":"2026-02-05T23:00:26.050Z"}
+{"level":"warn","message":"Tentativa de acesso sem token","timestamp":"2026-02-05T23:00:26.525Z"}
+{"email":"cesar@gmail","level":"info","message":"Login realizado com sucesso","role":"ADMIN","timestamp":"2026-02-05T23:00:31.950Z"}
+{"email":"cesar@gmail","level":"info","message":"Token verificado","timestamp":"2026-02-05T23:00:34.276Z","userId":"69851fe513ac5516daac927f"}
+{"email":"cesar@gmail","level":"info","message":"Token verificado","timestamp":"2026-02-05T23:00:44.035Z","userId":"69851fe513ac5516daac927f"}
+{"adminId":"69851fe513ac5516daac927f","level":"info","message":"PEV criado","nome":"Leblon","pevId":"6985211c0ee8029b938b7951","timestamp":"2026-02-05T23:00:45.163Z"}
+{"email":"cesar@gmail","level":"info","message":"Token verificado","timestamp":"2026-02-05T23:01:06.688Z","userId":"69851fe513ac5516daac927f"}
+{"email":"cesar@gmail","level":"info","message":"Token verificado","timestamp":"2026-02-05T23:01:10.114Z","userId":"69851fe513ac5516daac927f"}

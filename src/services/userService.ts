@@ -1,8 +1,7 @@
 import { User } from '../models/mongo/User'
 import bcrypt from 'bcrypt'
 import logger from '../utils/logger'
-
-import { upsertUsuarioNoGrafo } from './grafoService'
+import { deletarUserNoGrafo, upsertUserNoGrafo } from './grafoService'
 
 export async function criarUsuario(dados: any) {
   const senhaHash = await bcrypt.hash(dados.senha, 10)
@@ -14,18 +13,16 @@ export async function criarUsuario(dados: any) {
 
   const user = await User.create({ ...dados, senha: senhaHash })
 
-  await upsertUsuarioNoGrafo({
-    usuarioId: user._id.toString(),
+  await upsertUserNoGrafo({
+    id: user._id.toString(),
     nome: user.nome,
     email: user.email,
     role: user.role,
-    isAdmin: user.isAdmin,
-    createdAt: user.createdAt
+    pontos: user.pontos ?? 0
   })
 
   return user
 }
-
 
 export function buscarPorEmail(email: string) {
   return User.findOne({ email })
@@ -43,6 +40,16 @@ export async function tornarAdmin(userId: string, adminId: string) {
       { new: true }
     )
 
+    if (user) {
+      await upsertUserNoGrafo({
+        id: user._id.toString(),
+        nome: user.nome,
+        email: user.email,
+        role: user.role,
+        pontos: user.pontos ?? 0
+      })
+    }
+
     logger.info('Usuário promovido a admin', {
       userId,
       promotedBy: adminId
@@ -56,17 +63,11 @@ export async function tornarAdmin(userId: string, adminId: string) {
 }
 
 export async function deletarUsuario(userId: string, adminId: string) {
-  try {
-    const user = await User.findByIdAndDelete(userId)
+  const user = await User.findByIdAndDelete(userId)
 
-    logger.info('Usuário deletado', {
-      userId,
-      deletedBy: adminId
-    })
-
-    return user
-  } catch (error: any) {
-    logger.error('Erro ao deletar usuário', { error: error.message })
-    throw error
+  if (user) {
+    await deletarUserNoGrafo(userId)
   }
+
+  return user
 }

@@ -3,6 +3,8 @@ import cors from 'cors'
 import routes from './routes'
 import path from 'path'
 import { errorHandler } from './middlewares/errorMiddleware'
+import { auth } from './middlewares/authMiddleware'
+import { isAdmin } from './middlewares/adminMiddleware'
 
 const app = express()
 
@@ -25,7 +27,7 @@ app.get('/', (req, res) => {
   res.sendFile(path.resolve('frontend/index.html'))
 })
 
-app.get('/admin', (req, res) => {
+app.get('/admin', auth, isAdmin, (req, res) => {
   res.sendFile(path.resolve('frontend/admin.html'))
 })
 

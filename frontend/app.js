@@ -425,9 +425,11 @@ async function refreshUsuarios() {
 
 async function adminUsuario(id) {
   const ok = confirm('Tem certeza que deseja tornar este usuário ADMIN?')
+
   if (!ok) return
 
   const { res, payload } = await apiJson(`/usuarios/${id}/admin`, { method: 'PATCH' })
+  console.log({ res, payload })
   if (!res.ok) return alert(payload?.message || 'Erro ao promover usuário')
 
   alert(payload?.message || 'Usuário promovido com sucesso')
